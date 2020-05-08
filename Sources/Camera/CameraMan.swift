@@ -53,7 +53,7 @@ class CameraMan {
 
     // Output
     stillImageOutput = AVCaptureStillImageOutput()
-    stillImageOutput?.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
+    stillImageOutput?.outputSettings = [AVVideoCodecKey: AVVideoCodecType.jpeg]
   }
 
   func addInput(_ input: AVCaptureDeviceInput) {
@@ -227,7 +227,6 @@ class CameraMan {
 
   func preferredPresets() -> [AVCaptureSession.Preset] {
     return [
-      .photo,
       .high,
       .medium,
       .low

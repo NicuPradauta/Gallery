@@ -23,8 +23,8 @@ struct Permission {
       case .authorized:
         return .authorized
       @unknown default:
-        fatalError("Unexpected PHAuthorizationStatus value")
-        }
+        return .notDetermined
+      }
     }
 
     static func request(_ completion: @escaping () -> Void) {
@@ -50,7 +50,7 @@ struct Permission {
       case .authorized:
         return .authorized
       @unknown default:
-        fatalError("Unexpected PHAuthorizationStatus value")
+        return .notDetermined
         }
     }
 
@@ -59,5 +59,5 @@ struct Permission {
         completion()
       }
     }
-  }
+    }
 }
