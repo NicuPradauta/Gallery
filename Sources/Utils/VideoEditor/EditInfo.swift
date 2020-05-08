@@ -4,7 +4,6 @@ import AVFoundation
 struct EditInfo {
 
   // MARK: - Basic
-
   static func composition(_ avAsset: AVAsset) -> AVVideoComposition? {
     guard let track = avAsset.tracks(withMediaType: .video).first else { return nil }
 
@@ -95,7 +94,6 @@ struct EditInfo {
   }
 
   // MARK: - Advanced
-
   static var audioSettings: [String: AnyObject] {
     return [
       AVFormatIDKey: NSNumber(value: Int(kAudioFormatMPEG4AAC) as Int),
@@ -112,11 +110,10 @@ struct EditInfo {
     ]
 
     return [
-      AVVideoCodecKey: AVVideoCodecType.h264 as AnyObject,
+      AVVideoCodecKey: AVVideoCodecH264 as AnyObject,
       AVVideoWidthKey: NSNumber(value: 1920 as Int),
       AVVideoHeightKey: NSNumber(value: 1080 as Int),
       AVVideoCompressionPropertiesKey: compression as AnyObject
     ]
   }
 }
-
