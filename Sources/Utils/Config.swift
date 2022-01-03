@@ -115,4 +115,22 @@ public struct Config {
     public static var portraitSize: CGSize = CGSize(width: 360, height: 640)
     public static var landscapeSize: CGSize = CGSize(width: 640, height: 360)
   }
+    
+    public struct Localizations {
+        public static var cameraFlashOff = "Gallery.Camera.Flash.Off".g_localize(fallback: "OFF")
+        public static var cameraFlashOn = "Gallery.Camera.Flash.On".g_localize(fallback: "ON")
+        public static var cameraFlashAuto = "Gallery.Camera.Flash.Auto".g_localize(fallback: "AUTO")
+        
+        public static var galleryImagesTitle = "Gallery.Images.Title".g_localize(fallback: "PHOTOS")
+        public static var galleryCameraTitle = "Gallery.Camera.Title".g_localize(fallback: "CAMERA")
+        public static var galleryVideosTitle = "Gallery.Videos.Title".g_localize(fallback: "VIDEOS")
+        public static var galleryAllVideos = "Gallery.AllVideos".g_localize(fallback: "ALL VIDEOS")
+        
+        public static var galleryAndCameraPermissionInfo = "GalleryAndCamera.Permission.Info".g_localize(fallback: "Please grant access to photos and the camera.")
+        public static var galleryPermissionInfo = "Gallery.Permission.Info".g_localize(fallback: "Please grant access to photos.")
+        public static var goToSettingsButtonTitle = "Gallery.Permission.Button".g_localize(fallback: "Go to Settings")
+        
+        public static var done = "Gallery.Done".g_localize(fallback: "Done")
+        public static var nothingToShow = "Gallery.EmptyView.Text".g_localize(fallback: "Nothing to show")
+    }
 }

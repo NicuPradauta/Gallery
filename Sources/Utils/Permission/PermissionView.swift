@@ -49,9 +49,9 @@ class PermissionView: UIView {
         label.textColor = Config.Permission.textColor
         label.font = Config.Font.Text.regular.withSize(14)
         if Permission.Camera.needsPermission {
-            label.text = "GalleryAndCamera.Permission.Info".g_localize(fallback: "Please grant access to photos and the camera.")
+            label.text = Config.Localizations.galleryAndCameraPermissionInfo
         } else {
-            label.text = "Gallery.Permission.Info".g_localize(fallback: "Please grant access to photos.")
+            label.text = Config.Localizations.galleryPermissionInfo
         }
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -62,7 +62,7 @@ class PermissionView: UIView {
     
     func makeSettingButton() -> UIButton {
         let button = UIButton(type: .custom)
-        button.setTitle("Gallery.Permission.Button".g_localize(fallback: "Go to Settings").uppercased(),
+        button.setTitle(Config.Localizations.goToSettingsButtonTitle.uppercased(),
                         for: UIControl.State())
         button.backgroundColor = Config.Permission.Button.backgroundColor
         button.titleLabel?.font = Config.Font.Main.medium.withSize(16)
